@@ -56,7 +56,7 @@ class FileController extends Controller
         //return $request->file('file')->store('public/imagenes');
 
         $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
-// return $nombre;
+        // return $nombre;
         $ruta = storage_path() . '\app\public\imagenes/' . $nombre;
 
         // return $ruta;
@@ -72,20 +72,20 @@ class FileController extends Controller
         // $url = Storage::url($imagenes);
         //rescato la imagene y pido que me de su nombre
 
-        $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
+        // $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
 
-        $ruta = storage_path() . '\app\public\imagenes/' . $nombre;
+        // $ruta = storage_path() . '\app\public\imagenes/' . $nombre;
 
         // InterventioImagen para redimensionar la imagen.
         // solo paso el ancho 1200 para que alto se redimensione automaticamente
-        Image::make($request->file('file'))
-            ->resize(1200, null, function($constraint){
-                $constraint->aspectRatio();
-            })
-            ->save($ruta);
+        // Image::make($request->file('file'))
+        //     ->resize(1200, null, function($constraint){
+        //         $constraint->aspectRatio();
+        //     })
+        //     ->save($ruta);
 
-        $imagenes =  $request->file('file')->store('public/imagenes');
-        $url = Storage::url($imagenes);
+        // $imagenes =  $request->file('file')->store('public/imagenes');
+        // $url = Storage::url($imagenes);
 
 
         // return $url;
