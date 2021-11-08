@@ -57,9 +57,10 @@ class FileController extends Controller
 
         $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
         // return $nombre;
-        $ruta = storage_path() . '/app/public/imagenes/' . $nombre;
+        //$ruta = storage_path() . '/app/public/imagenes/' . $nombre;
+        $ruta = storage_path() . '/app/public/portadas/' . $nombre;
 
-        // return $ruta;
+        //return $ruta;
 
         Image::make($request->file('file'))
             ->resize(1000, null, function($constraint){
@@ -93,7 +94,9 @@ class FileController extends Controller
         // almaceno en la BD
         File::create([
             'user_id' => auth()->user()->id,
-            'url' => '/storage/imagenes/' . $nombre
+            //'url' => '/storage/imagenes/' . $nombre
+            'url' => '/storage/portadas/' . $nombre
+
         ]);
 
         // almacenamos en la base de datos
@@ -124,7 +127,7 @@ class FileController extends Controller
      */
     public function edit($file)
     {
-        return view('admin.files.edit', compact('file'));
+       return view('admin.files.edit', compact('file'));
     }
 
     /**
