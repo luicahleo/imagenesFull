@@ -32,21 +32,24 @@
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
+        
+
         <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('navigation-menu')->html();
-} elseif ($_instance->childHasBeenRendered('xGR6KaE')) {
-    $componentId = $_instance->getRenderedChildComponentId('xGR6KaE');
-    $componentTag = $_instance->getRenderedChildComponentTagName('xGR6KaE');
+} elseif ($_instance->childHasBeenRendered('pEtwPG0')) {
+    $componentId = $_instance->getRenderedChildComponentId('pEtwPG0');
+    $componentTag = $_instance->getRenderedChildComponentTagName('pEtwPG0');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('xGR6KaE');
+    $_instance->preserveRenderedChild('pEtwPG0');
 } else {
     $response = \Livewire\Livewire::mount('navigation-menu');
     $html = $response->html();
-    $_instance->logRenderedChild('xGR6KaE', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('pEtwPG0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
+        
 
         <?php echo $__env->yieldContent('content'); ?>
 

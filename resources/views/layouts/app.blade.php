@@ -20,7 +20,10 @@
     </head>
     <body class="font-sans antialiased bg-light">
         <x-jet-banner />
+        
+
         @livewire('navigation-menu')
+        
 
         @yield('content')
 
