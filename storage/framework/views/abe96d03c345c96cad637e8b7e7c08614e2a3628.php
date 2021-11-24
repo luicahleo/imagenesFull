@@ -1,0 +1,2 @@
+<a <?php echo e($attributes->merge(['class' => 'dropdown-item px-4'])); ?>><?php echo e($slot); ?></a>
+<?php /**PATH C:\MAMP\htdocs\imagenes\resources\views/vendor/jetstream/components/dropdown-link.blade.php ENDPATH**/ ?>
